@@ -1,0 +1,89 @@
+body {
+    height: 100vh;
+    font-family: 'Oswald', sans-serif;
+    display:flex;
+    background-image: linear-gradient(to bottom, rgb(67,205,163), rgb(44,62,81));
+}
+
+.logo-img {
+    margin-top: -2px;
+    margin-right: 10px;
+}
+
+.navbar-brand h5 {
+    cursor: default;
+    font-size: 4vh;
+    
+    color: #224C98;
+}
+.nav-item a {
+    color: #224C98;
+}
+.collapse{
+    list-style: none;   
+}
+
+.navbar-nav .nav-item i{
+    margin-right:5px;
+    padding-top:10px;
+    
+}
+
+.nav-item h3{
+    font-size:25px;
+    text-decoration:none;
+    margin-right:25px;
+}
+.navbar .nav-item a{
+    list-style: none;
+    text-decoration: none;
+    font-size:20px;
+    margin-left:15px;
+    /* padding-right:15px; */
+    
+}
+/* .fa-solid{
+    margin-bottom:15px;
+} */
+
+.hover-underline-animation {
+    position: relative;
+    display: inline-block;
+    text-decoration:none;
+    
+}
+ 
+.hover-underline-animation:before {
+    content:'';
+    position: absolute;
+    width:100%;
+    height: 2.5px;
+    border-radius:30px;
+    bottom: 0;
+    left: 0;
+    background-color: #224C98;
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: all 0.3s ease-in-out 0s;
+    text-decoration: none;
+}
+  
+.hover-underline-animation:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+    /* border-radius:30px; */
+    text-decoration:none;
+}
+
+.contact{
+    margin-left:570px;
+    margin-top:50px;
+    width:900px;
+    background-color: transparent;
+}
+
+.container h1{
+    
+    margin-left:20px;
+}

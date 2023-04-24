@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      import { db, doc, setDoc } from "./firebase.config.js";
+
+
+      const url = `https://www.googleapis.com/books/v1/volumes?q=${prompt(
+        "Enter the book"
+      )}`;
+
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          data.items.forEach(async (item) => {
+            await setDoc(doc(db, "booksCollections", item.id),  {
+              title: item.volumeInfo.title,
+              author: item.volumeInfo.authors.join(" , "),
+              image: item.volumeInfo.imageLinks.thumbnail,
+              publishedDate: item.volumeInfo.publishedDate,
+            });
+          });
+        });
+    </script>
+  </body>
+</html>

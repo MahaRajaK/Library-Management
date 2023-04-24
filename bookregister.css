@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    font-family: 'Oswald', sans-serif;
+    align-items: center;
+    justify-content: center;
+    /* background: url(IMAGES/forest.jpeg); */
+    background-image: linear-gradient(to bottom, rgb(67,205,163), rgb(44,62,81));
+
+}
+.navbar .nav-item a{
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+
+#emailbox{
+  padding: 1rem;
+  width: 40vw;
+  text-align: center;
+}
+
+.navbar-nav a {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 2px;
+    /* font-weight: bold; */
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo-img {
+    margin-top: -2px;
+    margin-right: 10px;
+    color: black;
+}
+
+.navbar-brand h5 {
+    cursor: default;
+   
+    font-size: 4vh;
+    color: #02295C;
+}
+
+.nav-item i {
+    margin-right: 5px;
+    
+}
+
+.nav-item a{
+    color:#02295C;
+    font-size:25px;
+}
+
+
+
+.hover-underline-animation {
+    position: relative;
+    display: inline-block;
+    text-decoration: none ;
+    margin-top:5px;
+    
+}
+  
+.hover-underline-animation:after{
+    color:inherit;  
+    content: '';
+    position: absolute;
+    width: 100%;
+    margin-top:12px;
+    transform: scaleX(0);
+    border-radius: 55px;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+  
+.hover-underline-animation:before {
+  color:inherit;  
+  content: '';
+    position: absolute;
+    width:100%;
+    height: 2.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    visibility: hidden;
+    border-radius:30px ;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: all 0.3s ease-in-out 0s;
+    text-decoration: none;
+}
+  
+.hover-underline-animation:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+    border-radius: 30px;
+    text-decoration:none;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border:black ;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  }
+  .center h1{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+  }
+  .center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+  }
+  .txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  .txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+  }
+  .txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+  }
+  .txt_field input:focus ~ label,
+  .txt_field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+  }
+  .txt_field input:focus ~ span::before,
+  .txt_field input:valid ~ span::before{
+    width: 100%;
+  }
+  .pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+  }
+  .pass:hover{
+    text-decoration: underline;
+  }
+  input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+  }
+  input[type="submit"]:hover{
+    border-color: #2691d9;
+    transition: .5s;
+  }
+  .signin_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+  }
+  .signup_link a{
+    color: #2691d9;
+    text-decoration: none;
+  }
+  .signup_link a:hover{
+    text-decoration: underline;
+  }
